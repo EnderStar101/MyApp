@@ -1,8 +1,9 @@
-import { IonBadge, IonCard, IonCardContent, IonCheckbox, IonContent, IonFab, IonFabButton, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonNote, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonBadge, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonCheckbox, IonContent, IonFab, IonFabButton, IonHeader, IonIcon, IonItem, IonLabel, IonList, IonNote, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import { RouteComponentProps } from 'react-router';
 import { add } from 'ionicons/icons';
 import './Home.css';
+import './newItem2.css';
 import Card1 from '../components/IonCard';
 
 const Home: React.FC<RouteComponentProps> = (props) => {
@@ -32,8 +33,13 @@ const Home: React.FC<RouteComponentProps> = (props) => {
           </IonFab>
         </IonList>
         <Card1/>
-        <IonCard routerLink="/new2">
-          
+        <IonCard>
+          <IonCardHeader>
+            <IonCardTitle>Grid Example</IonCardTitle>
+          </IonCardHeader>
+          <IonCardContent>
+            <a href="/new2">Grid</a>
+          </IonCardContent>
         </IonCard>
         <IonHeader collapse="condense">
           <IonToolbar>
